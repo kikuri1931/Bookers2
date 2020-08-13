@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookers2</title>
+    <title>Bookers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,59 @@
   </head>
 
   <body>
+    <header class="navbar-fixed-top">
+      <div class="container">
+        <p class="navbar-text">Bookers</p>
+         <div>
+          <ul class="navbar-right">
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-link" aria-hidden="true"></span>  About
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  sign up
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  login
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Users
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Books
+              </a>  
+            </li>
+            <li>
+              <a class="text-muted" href="">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>  logout
+              </a>  
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-9">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
