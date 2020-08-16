@@ -13,48 +13,52 @@
     <header class="navbar-fixed-top">
       <div class="container">
         <p class="navbar-text">Bookers</p>
-         <div>
-          <ul class="navbar-right">
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-link" aria-hidden="true"></span>  About
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  sign up
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  login
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Users
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Books
-              </a>  
-            </li>
-            <li>
-              <a class="text-muted" href="">
-                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>  logout
-              </a>  
-            </li>
-          </ul>
-        </div> 
-      </div>
+           <div>
+            <ul class="navbar-right">
+              <li>
+                <a class="text-muted" href="/">
+                  <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
+                </a>  
+              </li>
+              <li>
+                <a class="text-muted" href="/home/about">
+                  <span class="glyphicon glyphicon-link" aria-hidden="true"></span>  About
+                </a>  
+              </li>
+              <li>
+                <a class="text-muted" href="/users/sign_up">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  sign up
+                </a>  
+              </li>
+              <li>
+                <a class="text-muted" href="/users/sign_in">
+                  <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  login
+                </a>  
+              </li>
+              <li>
+                <a class="text-muted" href="">
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Users
+                </a>  
+              </li>
+              <li>
+                <a class="text-muted" href="">
+                  <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Books
+                </a>  
+              </li>
+              <li> 
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                 <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  logout
+                <% end %>
+              </li>
+            </ul>
+          </div> 
+        </div>
     </header>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+       <%= yield %>
+      </div>
+    </div>
     <footer>
       <div class="container">
         <div class="row">

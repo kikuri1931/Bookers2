@@ -17,7 +17,8 @@
 @import "bootstrap";
 
 body { 
-	padding-top: 70px; 
+	font-size: 13px;
+	margin-top: 55px; 
 	font-family: verdana, arial, helvetica, sans-serif;
 }
 header {
@@ -32,14 +33,20 @@ header {
 	display: inline-block;
 	padding: 15px;
 	}
-	a {
-	font-size: 13px;
-	}
 	a:hover {
 		color: white;
+		text-decoration: none;
 	}
 }
-footer {
-	font-size: 13px;
-
+p {
+	margin-bottom: 10px;
 }
+.field {
+	margin-bottom: 10px;
+}
+.actions {
+	margin-bottom: 10px;
+}
+a:visited {
+		color: #777777;
+	}
