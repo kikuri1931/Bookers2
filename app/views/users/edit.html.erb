@@ -1,0 +1,18 @@
+<div class="col-xs-3">
+	<h2>User info</h2>
+	<%= form_for(@user) do |f| %>
+		<div class="field">
+			<label>Name</label>
+			<%= f.text_field :name, autofocus: true %>
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<%= f.attachment_field :profile_image %>
+		</div>
+		<div class="field">
+			<label>Introduction</label>
+			<%= f.text_area :introduction, autofocus: true %>
+		</div>
+			<%= f.submit "Update User" %>
+	<% end %>
+</div>
