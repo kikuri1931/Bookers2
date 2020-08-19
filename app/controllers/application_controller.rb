@@ -1,9 +1,5 @@
 class ApplicationController < ActionController::Base
 	before_action :configure_permitted_parameters, if: :devise_controller?
-	#
-	#def before_sign_in_path_for(resource)
-     	#toppage_path
-  	#end
 	 def after_sign_in_path_for(resource)
 		mypage_path (resource)
 	end

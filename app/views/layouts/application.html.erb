@@ -10,51 +10,49 @@
   </head>
 
   <body>
-    <header class="navbar-fixed-top">
+    <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <p class="navbar-text">Bookers</p>
+        <nav class="nav navbar-nav navbar-left">
+          <span style="font-size: 20px;">Bookers</span>
+        </nav>
            <div>
             <ul class="navbar-right">
               <% if user_signed_in? %>
                 <li>
-                  <%= link_to user_path(current_user.id) do %>
-                   <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
+                  <%= link_to user_path(current_user.id), class:"glyphicon glyphicon-home" do %>
+                   Home
                   <% end %> 
                 </li>
                 <li>
-                  <%= link_to users_path do %>
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Users
+                  <%= link_to users_path, class:"glyphicon glyphicon-user" do %>
+                     Users
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to books_path do %>
-                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Books
+                  <%= link_to books_path, class:"glyphicon glyphicon-book" do %>
+                     Books
                   <% end %> 
                 </li>
                 <li> 
-                  <%= link_to destroy_user_session_path, method: :delete do %>
-                   <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>  logout
+                  <%= link_to destroy_user_session_path, class:"glyphicon glyphicon-log-out" , method: :delete do %>
+                    logout
                   <% end %>
                 </li>
               <% else %>
                 <li>
-                  <a class="text-muted" href="/">
-                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home
-                  </a>  
+                    <a class="glyphicon glyphicon-home" href="/"> Home</a>
                 </li>
                 <li>
-                  <a class="text-muted" href="/home/about">
-                    <span class="glyphicon glyphicon-link" aria-hidden="true"></span>  About
-                  </a>  
+                  <a class="glyphicon glyphicon-link" href="/home/about"> About</a>  
                 </li>
                 <li>
-                  <%= link_to new_user_registration_path do %>
-                   <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  sign up
+                  <%= link_to new_user_registration_path,class:"glyphicon glyphicon-edit" do %>
+                   sign up
                   <% end %> 
                 </li>
                 <li>
-                  <%= link_to new_user_session_path do %>
-                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  login
+                  <%= link_to new_user_session_path, class:"glyphicon glyphicon-log-in" do %>
+                     login
                   <% end %>
                 </li>
               <% end %>
@@ -64,7 +62,10 @@
     </header>
     <div class="container">
       <div class="row">
-       <%= yield %>
+        <p id="notice">
+        <%= notice %>
+        </p>
+        <%= yield %>
       </div>
     </div>
     <footer>

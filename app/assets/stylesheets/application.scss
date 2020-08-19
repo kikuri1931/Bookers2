@@ -22,12 +22,10 @@ body {
 	font-family: verdana, arial, helvetica, sans-serif;
 }
 header {
-	height: 50px;
-	background-color: black;
-	color: white;
-	p {
-		font-size: 20px;
-	}
+    height :50px;
+    span {
+    color: white;
+    }
 	li {
 	list-style: none;
 	display: inline-block;
